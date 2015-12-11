@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Dev Saas</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -26,9 +26,17 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-navbar-collapse">
+      <div class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'btn btn-default' %>
+        <% else %>
+          <%= link_to "Log in", new_user_registration_path, class: 'btn btn-default navbar-btn', method: :get %>
+        <% end %>
+      </div>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact us", new_contact_path %></li>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->

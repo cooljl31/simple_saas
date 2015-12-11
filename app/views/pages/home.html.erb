@@ -1,1 +1,20 @@
-<h1>Home</h1>
+<div class="jumbotron text-center">
+  <h1>Welcome to SaaS</h1>
+  <h3>A membership site where entrepreneurs can meet developers</h3>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="well">
+      <h2 class="text-center">Basic Membership</h2>
+      <h4>Sign up and get for free basic access to the community.</h4><br>
+      <%= link_to 'Sign up Pro', new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block'%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="well">
+      <h2 class="text-center">Pro Membership</h2>
+      <h4>Sign up for the pro account for $9.99 and get accessto the community and contact information</h4>
+      <%= link_to 'Sign up Pro', new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block'%>
+    </div>
+  </div>
+</div>

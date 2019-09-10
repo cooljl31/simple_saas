@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'devise', '~> 3.5', '>= 3.5.3'
+gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'stripe', '~> 1.31'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Use jquery as the JavaScript library
